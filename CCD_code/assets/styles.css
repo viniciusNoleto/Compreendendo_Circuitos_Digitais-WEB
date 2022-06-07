@@ -1,0 +1,201 @@
+* {
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 95px 42px 1fr auto;
+    grid-template-areas: 
+        "header",
+        "menu",
+        "main",
+        "footer";
+}
+
+.header {
+    grid-area: "header";
+    background-color: #2575be;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    column-gap: 12px;
+
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 2.8em;
+    padding: 5px;
+}
+
+.header > img {
+    height: 90px;
+}
+
+.menu {
+    grid-area: "menu";
+    background-color: #282a2e;
+    height: 42px;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-around;
+
+    z-index: 1;
+    box-shadow: 0px 4px 8px 0px rgba(40,42,46,0.42);
+}
+
+.menu > a {
+    font-size: 18px;
+    color: whitesmoke;
+    text-decoration: none;
+    
+    padding: 8px 25px;
+    transition:all .2s linear;
+}
+
+.menu > a:hover{
+    color: #3098f8;
+    background-color: rgb(36, 38, 43);
+}
+
+.main {
+    grid-area: "main";
+
+    scroll-behavior: smooth;
+
+    margin: 10px;
+    padding: 24px 12px;
+    background-color: #fbfbff;
+    text-align: justify;
+
+    z-index: 1;
+    box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.30);
+}
+
+.footer {
+    grid-area: "footer";
+    background-color: rgb(39, 44, 54);
+    padding: 5px 15px;
+
+    display: grid;
+    grid-template-columns: 1fr 300px 300px;
+    justify-items: stretch;
+    column-gap: 25px;
+
+    color: whitesmoke;
+}
+
+.footer > section {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.footer > section#site-info{
+    text-align: justify;
+}
+
+.footer > section#site-info > p {
+    text-align: justify;
+    margin-block-start: 0em;
+}
+
+.footer > section > h3 {
+    width: auto;
+    border-bottom: 1px solid rgb(67, 76, 94);
+}
+
+.footer > section > div.links-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: column;
+    column-gap: 1em;
+}
+
+.footer > section > div >  div > h4 {
+    grid-area: "title";
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-weight: 400;
+
+    color: #3098f8;
+    border-bottom: 1px solid #3098f8;
+}
+
+.footer > section a { 
+    color: whitesmoke;
+    text-decoration: none;
+
+    transition:all .2s linear;
+}
+
+.footer > section a:hover { 
+    color: #5fb2ff;
+    text-decoration: underline;
+}
+
+.footer > section > div > div > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer > section > div.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer > section > div.social-media div > a.fa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0px 0px 5px 0px;
+
+    font-size: 18px;
+    color: rgb(39, 44, 54);
+    text-decoration: none;
+
+    transition:all .2s linear;
+
+    background-color:whitesmoke;
+    width:33px;
+    height:33px;
+    border-radius:100%;
+}
+
+.footer > section > div.social-media > div:hover > a.fa {
+    color: whitesmoke;
+}
+
+.footer > section > div.social-media > div:hover > a.fa-instagram {
+    background-color: rgb(240, 51, 92);
+}
+
+.footer > section > div.social-media > div:hover > a.fa-github {
+    background-color: rgb(8, 57, 131);
+}
+
+.footer > section > div.social-media div:hover > a.fa-google {
+    background-color: rgb(233, 66, 53);
+}
+
+.footer > section > div.social-media > div#social-media-msg {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    column-gap: 8px;
+}
+
+.footer > section > div.social-media > div#social-media-msg > p {
+    margin-block-start: 0em;
+}
