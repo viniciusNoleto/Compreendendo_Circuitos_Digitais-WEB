@@ -3,6 +3,21 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 0.8rem;
+    border: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(235, 235, 240); 
+    box-shadow: inset 0px 0px 8px -4px rgba(38, 117, 191, 0.9); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(221, 221, 224); 
+}
+
 body {
     height: 100vh;
     margin: 0px;

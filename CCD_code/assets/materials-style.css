@@ -98,21 +98,16 @@
 }
 
 .main > div#subject-info > aside h3{
-    color: #363e46;
+    color: #22282e;
     text-decoration: none;
     font-size: 18px;
 }
 
-.main > div#subject-info > aside a{
-    color: #363e46;
-    text-decoration: none;
-}
-
-.main > div#subject-info > aside > nav > button.accordion {
+.main > div#subject-info > aside > nav > button.accordion,.main > div#subject-info > aside > nav > button.accordion-open {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1.5px solid #454d55;
+    border-bottom: 1px solid #454d55;
 
     background-color: #00000000;
     color: #1b68b1;
@@ -129,6 +124,21 @@
     transition: 0.4s;
 }
 
+.main > div#subject-info > aside > nav > button:after {
+    color: #777;
+    
+    float: right;
+    margin-left: 5px;
+}
+
+.main > div#subject-info > aside > nav > button.accordion:after {
+    content: '\1F890';
+}
+
+.main > div#subject-info > aside > nav > button.accordion-open:after {
+    content: '\1F893';
+}
+
 .main > div#subject-info > aside > nav > div {
     display: flex;
     flex-direction: column;
@@ -142,9 +152,16 @@
 
 .main > div#subject-info > aside > nav > div > a {
     padding-left: 12px;
+    color: #363e46;
+    text-decoration: none;
 }
 
 .main > div#subject-info > aside > nav > div > a:hover {
     color: #3f75aa;
     background-color: rgb(243, 244, 252);
+}
+
+:target {
+    text-decoration: underline #3f75aa;
+    transition: 0.5s linear;
 }

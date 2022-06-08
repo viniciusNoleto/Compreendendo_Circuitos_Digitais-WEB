@@ -1,0 +1,28 @@
+section.top-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section.proposal {
+    background-color: #1b1d20;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1px;
+
+    justify-items: stretch;
+}
+
+section.proposal > div.proposal-txt {
+    background-color: #f7f7ff;
+    padding: 0px 15px;
+
+    text-align: justify;
+}
+
+section.proposal > div.proposal-nav {
+    background-color: #f7f7ff;
+    padding: 0px 15px;
+
+    text-align: center;
+}
