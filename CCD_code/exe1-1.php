@@ -2,74 +2,78 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <title>default</title>
+        <title>CCD - Exercício 1</title>
+
+        <link rel="stylesheet" href="assets/game-style.css">
+        <link rel="stylesheet" href="assets/game-ex1-style.css">
+        
         <?php
             include("fix/links.php");
         ?>
 
+        <script src="assets/typeWrite.js" defer></script>
+
     </head>
     <body>
-        <header class="header">
-            <img src="images\logoSite.png" alt="logozinDeCria">
-            <p>
-                COMPREENDENDO CIRCUITOS DIGITAIS
-            </p>
-        </header>
-        <div class="menu">
+        <?php
+            include("fix/header.php");
+        ?>
+        <nav class="menu">
             <a href="materials.php">MATERIAL</a>
             <a href="quest.php">JOGAR</a>
-            <a href="temp.php">MODIFICAÇÕES</a>
+            <a href="default.php">TESTE</a>
+            <a href="index.php">MODIFICAÇÕES</a>
             <a href="temp.php">RESULTADOS</a>
-        </div>
-
-
+        </nav>
+        <div class="fill"></div>
+        
         <main class="main">
-            
-        </main>
-
-        <footer class="footer">
-            <section id="site-info">
-                <h3>Informações</h3>
-                <p>
-                    <?php
-                        include("fix/footer-txt.php");
-                    ?>
-                </p>
-            </section>
-            <section id="site-links">
-                <h3>Links</h3>
-                <div class="links-columns">
+            <section class="teacher-dialogue">
+                <img src="images\teacher.png" alt="teacher">
+                <div class="teacher-dialog-text">
+                    <span class="typeWrite">
+                        <?php
+                            include("fix/teacher-dialogues/ex1-1-dialogue.php");
+                        ?>
+                    </span>
+                </div>
+                <div class="ex-quest">
                     <div>
-                        <h4>Livros</h4>
-                        <ul>
-                            <li><a href="">livro 1</a></li>
-                            <li><a href="">livro 2</a></li>
-                            <li><a href="">livro 3</a></li>
-                        </ul>
+                        <span>1.</span>
+                        <div><img src="images/ezgif-4-31cddcc789.gif" alt="quest1"></div>
                     </div>
-                    <div>
-                        <h4>Artigos</h4>
-                        <ul>
-                            <li><a href="">artigo 1</a></li>
-                            <li><a href="">artigo 2</a></li>
-                            <li><a href="">artigo 3</a></li>
-                        </ul>
-                    </div>
-                    <diV>
-                        <h4>Autores</h4>
-                        <ul>
-                            <li><a href="">autor 1</a></li>
-                            <li><a href="">autor 2</a></li>
-                            <li><a href="">autor 3</a></li>
-                        </ul>
-                    </diV>
                 </div>
             </section>
-            <section>
-                <?php
-                    include("fix/footer-social-media.php");
-                ?>
+            
+            <section class="container-alternative">
+                <div class="content">
+                    <img src="images\circAND.png" alt="logozinDeCria">
+                    <div class="alternative"><input type="radio" name="al1"><span>Função <u>E</u></span></div>
+                </div>
+
+                <div class="content">
+                    <img src="images\functionANDplusNOT.png" alt="logozinDeCria">
+                    <div class="alternative"><input type="radio" name="al1"><span>Função <u>E</u></span></div>
+                </div>
+
+                <div class="content">
+                    <img src="images\functionANDplusNOT.png" alt="logozinDeCria">
+                    <div class="alternative"><input type="radio" name="al1"><span>Função <u>E</u></span></div>
+                </div>
+
+                <div class="content">
+                    <img src="images\functionANDplusNOT.png" alt="logozinDeCria">
+                    <div class="alternative"><input type="radio" name="al1"><span>Função <u>E</u></span></div>
+                </div>
             </section>
-        </footer>
+        </main>
+
+        <?php
+            include("fix/footer/standard-footer.php");
+        ?>
+
+        <script>
+
+        </script>
     </body>
 </html>

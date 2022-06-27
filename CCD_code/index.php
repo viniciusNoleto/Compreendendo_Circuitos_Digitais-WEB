@@ -4,108 +4,96 @@
         <meta charset="UTF-8">
         <title>CCD - Home</title>
 
-        <link rel="stylesheet" href="assets/carousel-style.css">
         <link rel="stylesheet" href="assets/home-style.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+        <link rel="stylesheet" href="assets/carousel-style.css">
         
         <?php
             include("fix/links.php");
         ?>
     </head>
     <body>
-        <header class="header">
-            <img src="images\logoSite.png" alt="logozinDeCria">
-            <p>
-                COMPREENDENDO CIRCUITOS DIGITAIS
-            </p>
-        </header>
-        <div class="menu">
+        <?php
+            include("fix/header.php");
+        ?>
+        <nav class="menu">
             <a href="materials.php">MATERIAL</a>
             <a href="quest.php">JOGAR</a>
+            <a href="default.php">TESTE</a>
             <a href="temp.php">MODIFICAÇÕES</a>
             <a href="temp.php">RESULTADOS</a>
-        </div>
+        </nav>
+        <div class="fill"></div>
 
 
         <main class="main">
-            <section class="top-cards">
-                <section class="top-cards-info">
-                    
-                </section>
-                <section class="top-cards-cards">
-                        <div class="conteiner-carousel">
-                            <input type="radio" name="carousel" checked/>
-                            <input type="radio" name="carousel"/>
-                            <input type="radio" name="carousel"/>
-                            <input type="radio" name="carousel"/>
-                            <input type="radio" name="carousel"/>
-                            <div id="carousel">
-                                <div class="carousel-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti eveniet praesentium labore eius fuga dolor quam temporibus molestiae nesciunt sequi necessitatibus ipsa, eligendi, ab officiis modi magnam quod voluptas sint?</div>
-                                <div class="carousel-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, qui velit? Quo minus molestiae, rem consectetur ducimus dolores officiis fugit illum adipisci quis enim accusantium labore, optio placeat soluta quasi.</div>
-                                <div class="carousel-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, praesentium doloremque? Dolores odio quaerat provident placeat mollitia sed voluptatem, quidem officia! Consectetur eveniet in reiciendis odio dolor ad deleniti veniam?</div>
-                                <div class="carousel-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi aliquam recusandae minus eius? Ex nam cumque totam quod nemo libero dolorem. Id molestias maiores autem atque quos itaque veniam repudiandae?</div>
-                                <div class="carousel-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id veritatis dolor praesentium, nisi iste sed rerum voluptate qui facere itaque. Accusamus cupiditate impedit culpa beatae vel in molestiae ipsam recusandae.</div>
+            <section>
+                <section class="conteiner-carousel">
+                    <input class="carousel-input" id=carousel-input1 type="radio" name="carousel">
+                    <input class="carousel-input" id=carousel-input2 type="radio" name="carousel">
+                    <input class="carousel-input" id=carousel-input3 type="radio" name="carousel" checked>
+                    <input class="carousel-input" id=carousel-input4 type="radio" name="carousel">
+                    <input class="carousel-input" id=carousel-input5 type="radio" name="carousel">
+                    <section class="carousel">
+                        <div class="carousel-item">
                             <div>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti eveniet praesentium labore eius fuga dolor quam temporibus molestiae nesciunt sequi necessitatibus ipsa, eligendi, ab officiis modi magnam quod voluptas sint?
+                            </div>
                         </div>
+                        <div class="carousel-item">
+                            <div>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, qui velit? Quo minus molestiae, rem consectetur ducimus dolores officiis fugit illum adipisci quis enim accusantium labore, optio placeat soluta quasi.
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, praesentium doloremque? Dolores odio quaerat provident placeat mollitia sed voluptatem, quidem officia! Consectetur eveniet in reiciendis odio dolor ad deleniti veniam?
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi aliquam recusandae minus eius? Ex nam cumque totam quod nemo libero dolorem. Id molestias maiores autem atque quos itaque veniam repudiandae?
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id veritatis dolor praesentium, nisi iste sed rerum voluptate qui facere itaque. Accusamus cupiditate impedit culpa beatae vel in molestiae ipsam recusandae.
+                            </div>
+                        </div>
+                    <section>
                 </section>
-            </section>
-            <section class="proposal">
-                <div class="proposal-txt">
-                    
-                </div>
-                <div class="proposal-nav">
-                    
-                </div>
             </section>
         </main>
 
-        <footer class="footer">
-            <section id="site-info">
-                <h3>Informações</h3>
-                <p>
-                    <?php
-                        include("fix/footer-txt.php");
-                    ?>
-                </p>
-            </section>
-            <section id="site-links">
-                <h3>Links</h3>
-                <div class="links-columns">
-                    <div>
-                        <h4>Livros</h4>
-                        <ul>
-                            <li><a href="">livro 1</a></li>
-                            <li><a href="">livro 2</a></li>
-                            <li><a href="">livro 3</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>Artigos</h4>
-                        <ul>
-                            <li><a href="">artigo 1</a></li>
-                            <li><a href="">artigo 2</a></li>
-                            <li><a href="">artigo 3</a></li>
-                        </ul>
-                    </div>
-                    <diV>
-                        <h4>Autores</h4>
-                        <ul>
-                            <li><a href="">autor 1</a></li>
-                            <li><a href="">autor 2</a></li>
-                            <li><a href="">autor 3</a></li>
-                        </ul>
-                    </diV>
-                </div>
-            </section>
-            <section>
-                <?php
-                    include("fix/footer-social-media.php");
-                ?>
-            </section>
-        </footer>
+        <?php
+            include("fix/footer/standard-footer.php");
+        ?>
 
-      <script>
+        <script>
         
-      </script>
+            var carouselInputArrey = [1,"carousel-input3","carousel-input4","carousel-input5","carousel-input1","carousel-input2"];
+            
+            var carouselCheckTimer = setInterval(function() {
+                document.getElementById(carouselInputArrey[carouselInputArrey[0]]).checked = true;
+                carouselInputArrey[0] < 5 ? carouselInputArrey[0]++ : carouselInputArrey[0]=1;
+            }, 10*1000);
+
+            document.querySelectorAll('input[type="radio"]').forEach(input => {
+                input.addEventListener('click', function () {
+                    clearInterval(carouselCheckTimer);
+
+                    for (var j = 1;j<carouselInputArrey.length;j++) {
+                        if (input.id == carouselInputArrey[j]) {
+                            carouselInputArrey[0]=j;
+                        };
+                    };
+
+                    carouselCheckTimer = setInterval(function() {
+                        document.getElementById(carouselInputArrey[carouselInputArrey[0]]).checked = true;
+                        carouselInputArrey[0] < 5 ? carouselInputArrey[0]++ : carouselInputArrey[0]=1;
+                    }, 10*1000);
+                });
+            });
+
+        </script>
     </body>
 </html>
