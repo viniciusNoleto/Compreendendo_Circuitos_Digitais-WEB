@@ -1,8 +1,0 @@
-main > section.container-alternative > div.content {
-    display: grid;
-    justify-items: stretch;
-    grid-template-areas: "img img"
-                         "alternative1  alternative2"
-                         "alternative3  alternative4";
-    column-gap: 4px;
-}
