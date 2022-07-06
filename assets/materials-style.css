@@ -1,0 +1,166 @@
+.main > div#subject-call {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 12px 30px;
+    background-color: #bebee9;
+    border-bottom: 2px solid #454d55;
+}
+
+.main > div#subject-call img {
+    max-width: max-content;
+    max-height: max-content;
+}
+
+.main > div#subject-call h1 {
+    font-weight: 600;
+    text-align: left;
+    color: rgb(79, 50, 163);
+
+    margin-block-end: 0px;
+}
+
+.main > div#subject-call h5 {
+    font-weight: 600;
+    text-align: left;
+    color: #454d55;
+
+    margin-block-start: 0.2em;
+    margin-inline-start: 4px;
+}
+
+.main > div#subject-call > div#subject-call-title {
+    width: 480px;
+}
+
+.main > div#subject-call > div#subject-call-img > #subject-call-img1 {
+    width: 560px;
+}
+
+.main > div#subject-info {
+    display: grid;
+    grid-template-columns: auto 220px;
+    column-gap: 12px;
+    
+    padding: 12px 10px;
+
+    justify-items: center;
+    align-items: start;
+}
+
+.main > div#subject-info > div#subject-info-text > div.subject-info-text-title {
+    border-bottom: 1px solid #454d55;
+    
+    grid-template-columns: 1fr;
+    padding: 30px 15px 5px 15px;
+
+    font-size: 30px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+.main > div#subject-info > div#subject-info-text > div.subject-info-text-text > div {
+    display: grid;
+    grid-template-columns: 3fr auto;
+    column-gap: 18px;
+    padding: 0px 15px;
+
+    align-items: center;
+    justify-items: center;
+}
+
+.main > div#subject-info > div#subject-info-text > div.subject-info-text-text > div img{
+    max-width: 280px;
+}
+
+.main > div#subject-info > div#subject-info-text > div.subject-info-text-text > div:nth-child(odd) {
+    background-color: #f2f2fd;
+}
+.main > div#subject-info > div#subject-info-text > div.subject-info-text-text > div:nth-child(even) {
+    background-color: #f6f6ff;
+}
+
+.main > div#subject-info > aside {
+    overflow-y: scroll;
+    max-height: 520px;
+
+    width: 210px;
+
+    position: -webkit-sticky;
+    position: sticky;
+    margin: 50px 0px;
+    top: 50px;
+    
+    padding: 12px;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.main > div#subject-info > aside h3{
+    color: #22282e;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.main > div#subject-info > aside > nav > button.accordion,.main > div#subject-info > aside > nav > button.accordion-open {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #454d55;
+
+    background-color: #00000000;
+    color: rgb(102, 57, 238);
+
+    cursor: pointer;
+    
+    padding: 8px;
+    width: 100%;
+    
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    
+    transition: 0.4s;
+}
+
+.main > div#subject-info > aside > nav > button:after {
+    color: #777;
+    
+    float: right;
+    margin-left: 5px;
+}
+
+.main > div#subject-info > aside > nav > button.accordion:after {
+    content: '\1F890';
+}
+
+.main > div#subject-info > aside > nav > button.accordion-open:after {
+    content: '\1F893';
+}
+
+.main > div#subject-info > aside > nav > div {
+    display: flex;
+    flex-direction: column;
+    
+    border-bottom: 1px solid rgb(52, 37, 99);
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.main > div#subject-info > aside > nav > div > a {
+    padding-left: 12px;
+    color: #363e46;
+    text-decoration: none;
+}
+
+.main > div#subject-info > aside > nav > div > a:hover {
+    color: rgb(95, 57, 211);
+    background-color: rgb(243, 244, 252);
+}
