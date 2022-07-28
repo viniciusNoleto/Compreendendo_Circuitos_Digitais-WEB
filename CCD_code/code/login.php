@@ -11,7 +11,7 @@
                         $errors[] = "deu ruim";
                     };
 
-                    if(isset($_POST['name'])){
+                    if(isset($_POST['password'])){
                         if(trim($_POST['password'])===""){
                             $errors[] = "deu ruim";
                         };
@@ -20,7 +20,7 @@
                     };
 
                     if(count($errors)==0){
-                        $sql_search = "SELECT `name`, `password`, avatar FROM student WHERE `name`=? AND `password`=?";
+                        $sql_search = "SELECT `id`, `name`, `password`, `avatar`, `teacher` FROM student WHERE `name`=? AND `password`=?";
                         
                         $stmt_search = $db->prepare($sql_search);
                         $stmt_search->bind_param("ss",$_POST['name'],$_POST['password']);
@@ -80,9 +80,8 @@
                     </alert>
                 </div>
             </section>
-            <section>
+            <section class="new-account">
                 <a href="base?file=account&_file=sign-in">Ainda não possui uma conta?</a>
-                <a href="base?file=account&_file=modify-account">Quer mudar alguma configuração do seu usuário?</a>
             </section>
 
         </main>

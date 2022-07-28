@@ -2,9 +2,11 @@
 
     function validate_one_input($post_data, $one_input){
         if(count($post_data) > 0){
-            if(trim($post_data['name']) === "" && $one_input == 'name'){
-                echo "O campo nome é obrigatorio";
-            };
+            if($one_input == 'name'){
+                if(trim($post_data['name']) === ""){
+                    echo "O campo nome é obrigatorio";
+                };
+            }
     
             if(!filter_var($post_data['email'], FILTER_VALIDATE_EMAIL) && $one_input == 'email'){
                 echo "O campo email é obrigatorio e deve estar na formatação correta";

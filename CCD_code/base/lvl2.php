@@ -1,7 +1,7 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>CCD - Exercício 1 Nível 2</title>
+        <title>CCD - Nível 2</title>
 
         <link rel="stylesheet" href="../assets/game-style.css">
         <link rel="stylesheet" href="../assets/game-ex2-style.css">
@@ -9,6 +9,8 @@
         
         <?php
             include("fix/links.php");
+            include("fix/calc/next-ex-calc.php");
+            require_once("fix/calc/pts-ex-calc.php");
         ?>
 
         <script src="../assets/typeWrite.js" defer></script>
@@ -30,23 +32,9 @@
             <?php
                 include(__DIR__ . "/../code/{$_GET['_file']}.php");
             ?>
-
-            <section class="next-ex">
-                <div class="game-button"> Tem certeza? Então vamos para a
-                    <a class="botton-line-important"
-                        href=<?php
-                                include("fix/calc/next-ex-calc-2.php");
-                            ?>
-                    >próxima fase</a>
-                </div>
-            </section>
         </main>
 
         <?php
             include("fix/footer/standard-footer.php");
         ?>
-
-        <script>
-
-        </script>
     </body>

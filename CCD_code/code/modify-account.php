@@ -28,7 +28,7 @@
 
             $sql_modify = 
             "UPDATE student
-            SET `name` = ?, email = ?, born = ?, `password` = ?
+            SET `name` = ?, email = ?, born = ?, `password` = ?, `avatar` = ?
             WHERE id = ?";
 
             $stmt_update = $db->prepare($sql_modify);
@@ -38,44 +38,33 @@
                 $post_data["email"],
                 $post_data["born"],
                 $post_data["password"],
+                $post_data["avatar"],
                 $post_data["id"]
             ];
 
-            $stmt_update->bind_param("ssssi",...$input_params);
+            $stmt_update->bind_param("sssssi",...$input_params);
             
             $stmt_update->execute();
-        }
 
-        if(isset($_GET['cod'])){
-            $sql_get = "SELECT * FROM student WHERE id = ?";
 
-            $stmt_get = $db->prepare($sql_get);
-            $stmt_get->bind_param("i", $_GET['cod']);
+            $sql_search = "SELECT `id`, `name`, `password`, `avatar`, `teacher` FROM student WHERE `id` = ?";
+                        
+            $stmt_search = $db->prepare($sql_search);
+            $stmt_search->bind_param("s",$_SESSION['profile']['id']);
+            $stmt_search->execute();
 
-            if($stmt_get->execute()){
-                $get_result = $stmt_get->get_result();
-                if($get_result->num_rows > 0){
-                    $post_data = $get_result->fetch_assoc();
-                };
+            $result = $stmt_search->get_result()->fetch_assoc();
+            if($result !== NULL){
+                $_SESSION['profile'] = $result;
             };
         };
     ?>
 
     <section>
 
-        <form action="/account.php" method="get">
-            <input type="hidden" name="dir" value="code">
-            <input type="hidden" name="file" value="modify-login">
-            <div class="c c6">
-                <button>Buscar</button>
-                <input type="number" name="cod" placeholder="Fala o código aí paizão"
-                    value="<?php if(isset($_GET['cod'])){echo $_GET['cod'];} ?>">
-            </div>
-        </form>
-
-        <form action="#" method="post">
+        <form action="" method="post">
             
-            <input type="hidden" name="id" value="<?php if(count($post_data) > 0){echo $post_data['id'];} ?>">
+            <input type="hidden" name="id" value="<?php if(count($post_data) > 0){echo $_SESSION['profile']['id'];} ?>">
             
             <div class="c c4">
                 <label for="name">Novo Nome:</label>
@@ -104,55 +93,21 @@
                     value="<?php if(count($post_data) > 0){echo $post_data['email'];} ?>">
                 <alert><?php validate_one_input($post_data, 'email') ?></alert>
             </div>
+
+            <div class="c6"> Avatar: </div>
+
+            <section class="c6 choose-avatar">
+                <div><img src="/images/avatar (1).png" alt=""><input type="radio" name="avatar" id="avatar" value="1" checked></div>
+                <div><img src="/images/avatar (2).png" alt=""><input type="radio" name="avatar" id="avatar" value="2"></div>
+                <div><img src="/images/avatar (3).png" alt=""><input type="radio" name="avatar" id="avatar" value="3"></div>
+                <div><img src="/images/avatar (4).png" alt=""><input type="radio" name="avatar" id="avatar" value="4"></div>
+                <div><img src="/images/avatar (5).png" alt=""><input type="radio" name="avatar" id="avatar" value="5"></div>
+                <div><img src="/images/avatar (6).png" alt=""><input type="radio" name="avatar" id="avatar" value="6"></div>
+            </section>
             
             <div class="for-button c6">
                 <button>Confirmar</button>
             </div>
         </form>
-    </section>
-
-    <section>
-        <?php
-            $sql_table = "SELECT name,email,born FROM student";
-
-            $result = $db->query($sql_table);
-
-            $registers = [];
-
-            if($result->num_rows > 0){
-                while($row = $result->fetch_assoc()){
-                    $registers[] = $row;
-                }
-            }
-        ?>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Email</th>
-                    <th>Idade</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach($registers as $register):?>
-                    <tr>
-                        <td><?= $register['name']?></td>
-                        <td><?= $register['email']?></td>
-                        <td>
-                            <?php 
-                                $actual_date = explode("/",date("Y/m/d"));
-                                $born_date = explode("-",$register['born']);
-                                $old = $actual_date[0] - $born_date[0] - 1;
-                                if(($actual_date[1]>$born_date[1]) || ($actual_date[1]==$born_date[1] && $actual_date[2]>=$born_date[2])){
-                                    $old = $old + 1;
-                                }; 
-
-                                echo($old);
-                            ?>
-                        </td>
-                    </tr>
-                <?php endforeach?>
-            </tbody>
-        </table>      
     </section>
 </main>

@@ -5,14 +5,14 @@ main {
     row-gap: 20px;
 }
 
-main > section.container-alternative > div.content > img {
+main section.container-alternative > div.content > img {
     grid-area: img;
     height: 92px;
     max-width: 270px;;
     margin-bottom: 8px;
 }
 
-main > section.container-alternative > div.content > div.alternative {
+main section.container-alternative > div.content > div.alternative {
     border-radius: 8px;
     border: 2px solid #ddd;
 
@@ -26,23 +26,23 @@ main > section.container-alternative > div.content > div.alternative {
     padding: 5px 12.5px 5px 12.5px;
 }
 
-main > section.container-alternative > div.content > div.alternative:nth-of-type(1) {
+main section.container-alternative > div.content > div.alternative:nth-of-type(1) {
     grid-area: alternative1;
 }
 
-main > section.container-alternative > div.content > div.alternative:nth-of-type(2) {
+main section.container-alternative > div.content > div.alternative:nth-of-type(2) {
     grid-area: alternative2;
 }
 
-main > section.container-alternative > div.content > div.alternative:nth-of-type(3) {
+main section.container-alternative > div.content > div.alternative:nth-of-type(3) {
     grid-area: alternative3;
 }
 
-main > section.container-alternative > div.content > div.alternative:nth-of-type(4) {
+main section.container-alternative > div.content > div.alternative:nth-of-type(4) {
     grid-area: alternative4;
 }
 
-main > section.teacher-dialogue {
+main section.teacher-dialogue {
     display: grid;
     grid-template-columns: 185px 400px 1fr;
     grid-template-rows: 1fr;
@@ -51,12 +51,12 @@ main > section.teacher-dialogue {
     align-items: start;
 }
 
-main > section.teacher-dialogue > img{
+main section.teacher-dialogue > img{
     margin-top: 8px;
     height: 185px;
 }
 
-main > section.teacher-dialogue > div.teacher-dialog-text > span.teacher-dialog-text-span::after {
+main section.teacher-dialogue > div.teacher-dialog-text > span.teacher-dialog-text-span::after {
     content: '|';
     margin-left: 2px;
     animation: blink 1s infinite;
@@ -71,11 +71,18 @@ main > section.teacher-dialogue > div.teacher-dialog-text > span.teacher-dialog-
     }
 }
 
-main > section.next-ex {
+main section.next-ex {
     display: grid;
     justify-content: center;
 
     margin-top: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 30px;
 }
 
 .game-button {
@@ -87,13 +94,13 @@ main > section.next-ex {
     color: whitesmoke;
 }
 
-button.game-button {
+span.game-button {
     font-weight: 400;
 
     transition: all .15s ease-in-out;
 }
 
-button.game-button:hover {
+span.game-button:hover {
     color:rgb(184, 108, 255);
     text-decoration:underline;
 }
@@ -102,6 +109,18 @@ div.game-button {
     display: flex;
     flex-direction: row;
     column-gap: 3px;
+}
+
+button {
+    font-size: 16px;
+    padding: 0px;
+
+    cursor: pointer;
+}
+
+button.transparent {
+    border: 0px;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 input[type="radio"] {

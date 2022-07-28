@@ -10,25 +10,24 @@
             <div>
                 <h4>Livros</h4>
                 <ul>
-                    <li><a href="">livro 1</a></li>
-                    <li><a href="">livro 2</a></li>
-                    <li><a href="">livro 3</a></li>
+                    <li><a href="../aula1_2ERE_sistemas de numeração.pdf">Sistemas de Numeração</a></li>
+                    <li><a href="../Cap1_Livro_Texto_Elementos_de_eletronica_digital_parte_001.pdf">Ele. da Eletrônica Digi.</a></li>
+                    <li><a href="../Material_Complementar_Capitulo1.pdf">Habili. Tec. em Eletrônica</a></li>
                 </ul>
             </div>
             <div>
                 <h4>Artigos</h4>
                 <ul>
-                    <li><a href="">artigo 1</a></li>
-                    <li><a href="">artigo 2</a></li>
-                    <li><a href="">artigo 3</a></li>
+                    <li><a href="https://tecdicas.com/categoria/circuitos-logicos/">Tec Dicas</a></li>
+                    <li><a href="../arq0271.pdf">SCA Mantovani</a></li>
                 </ul>
             </div>
             <diV>
                 <h4>Autores</h4>
                 <ul>
-                    <li><a href="">autor 1</a></li>
-                    <li><a href="">autor 2</a></li>
-                    <li><a href="">autor 3</a></li>
+                    <li><a href="https://www.amazon.com.br/s?i=stripbooks&rh=p_27%3AGregory+Moss&s=relevancerank&text=Gregory+Moss&ref=dp_byline_sr_book_3"> Ronald Tocci</a></li>
+                    <li><a href="https://clubedeautores.com.br/livro/circuitos-digitais?gclid=Cj0KCQjwxIOXBhCrARIsAL1QFCadpyxXlKDmhAepVmprb_TUaSGG1gXfXko9GRvnzVozCyR1dc4guLsaAk3tEALw_wcB">Marisi Piagetti de Pádua</a></li>
+                    <li><a href="https://www.amazon.com.br/s?i=stripbooks&rh=p_27%3ARonald+Tocci&s=relevancerank&text=Ronald+Tocci&ref=dp_byline_sr_book_1">Neal Widmer</a></li>
                 </ul>
             </diV>
         </div>

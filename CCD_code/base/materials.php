@@ -19,7 +19,7 @@
         <nav class="menu">
             <a href="base?file=quest">JOGAR</a>
             <a href="../index.php">HOME</a>
-            <a href="base?file=temp">RESULTADOS</a>
+            <a href="base?file=results">RESULTADOS</a>
         </nav>
 
         <main class="main">
@@ -182,30 +182,31 @@
                     </div>
                 </div>
 
-                <aside>
-                    <h3>Navegue rapidamente</h3>
-                    <nav>
-                        <button class="accordion">Circuitos</button>
-                        <div>
-                            <a href="#T1">Circuito E</a>
-                            <a href="#T2">Circuito OU</a>
-                            <a href="#T3">Circuito NÃO</a>
-                            <a href="#T4">Circuito OU EXCLUSIVO</a>
-                            <a href="#T5">Circuito COINCIDENCIA</a>
-                        </div>
-                        <button class="accordion">Portas Lógicas</button>
-                        <div>
-                            <a href="#T6">Porta Lógica AND</a>
-                            <a href="#T7">Porta Lógica OR</a>
-                            <a href="#T8">Porta Lógica NOT</a>
-                            <a href="#T9">Porta Lógica NAND</a>
-                            <a href="#T10">Porta Lógica NOR</a>
-                            <a href="#T11">Porta Lógica XOR</a>
-                            <a href="#T12">Porta Lógica XNOR</a>
-                        </div>
-                    </nav>
-                </aside>
-                
+                <section style="height: 100%;">
+                    <aside>
+                        <h3>Navegue rapidamente</h3>
+                        <nav>
+                            <button class="accordion">Circuitos</button>
+                            <div>
+                                <a href="#T1">Circuito E</a>
+                                <a href="#T2">Circuito OU</a>
+                                <a href="#T3">Circuito NÃO</a>
+                                <a href="#T4">Circuito OU EXCLUSIVO</a>
+                                <a href="#T5">Circuito COINCIDENCIA</a>
+                            </div>
+                            <button class="accordion">Portas Lógicas</button>
+                            <div>
+                                <a href="#T6">Porta Lógica AND</a>
+                                <a href="#T7">Porta Lógica OR</a>
+                                <a href="#T8">Porta Lógica NOT</a>
+                                <a href="#T9">Porta Lógica NAND</a>
+                                <a href="#T10">Porta Lógica NOR</a>
+                                <a href="#T11">Porta Lógica XOR</a>
+                                <a href="#T12">Porta Lógica XNOR</a>
+                            </div>
+                        </nav>
+                    </aside>
+                </section>
             </div>
         </main>
 

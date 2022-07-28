@@ -82,7 +82,7 @@
     background-color: #f6f6ff;
 }
 
-.main > div#subject-info > aside {
+.main > div#subject-info aside {
     overflow-y: scroll;
     max-height: 520px;
 
@@ -90,24 +90,23 @@
 
     position: -webkit-sticky;
     position: sticky;
-    margin: 50px 0px;
-    top: 50px;
+    top: 0px;
+
+    z-index: 200;
     
     padding: 12px;
-
-    z-index: 2;
 
     display: flex;
     flex-direction: column;
 }
 
-.main > div#subject-info > aside h3{
+.main > div#subject-info aside h3{
     color: #22282e;
     text-decoration: none;
     font-size: 18px;
 }
 
-.main > div#subject-info > aside > nav > button.accordion,.main > div#subject-info > aside > nav > button.accordion-open {
+.main > div#subject-info aside > nav > button.accordion,.main > div#subject-info aside > nav > button.accordion-open {
     border-top: none;
     border-left: none;
     border-right: none;
@@ -128,22 +127,22 @@
     transition: 0.4s;
 }
 
-.main > div#subject-info > aside > nav > button:after {
+.main > div#subject-info aside > nav > button:after {
     color: #777;
     
     float: right;
     margin-left: 5px;
 }
 
-.main > div#subject-info > aside > nav > button.accordion:after {
+.main > div#subject-info aside > nav > button.accordion:after {
     content: '\1F890';
 }
 
-.main > div#subject-info > aside > nav > button.accordion-open:after {
+.main > div#subject-info aside > nav > button.accordion-open:after {
     content: '\1F893';
 }
 
-.main > div#subject-info > aside > nav > div {
+.main > div#subject-info aside > nav > div {
     display: flex;
     flex-direction: column;
     
@@ -154,13 +153,13 @@
     transition: max-height 0.2s ease-out;
 }
 
-.main > div#subject-info > aside > nav > div > a {
+.main > div#subject-info aside > nav > div > a {
     padding-left: 12px;
     color: #363e46;
     text-decoration: none;
 }
 
-.main > div#subject-info > aside > nav > div > a:hover {
+.main > div#subject-info aside > nav > div > a:hover {
     color: rgb(95, 57, 211);
     background-color: rgb(243, 244, 252);
 }

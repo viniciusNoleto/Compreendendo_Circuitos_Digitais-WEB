@@ -16,23 +16,23 @@ form > div.c {
     align-items: center;
 }
 
-form > div.c2 {
+form > .c2 {
     grid-area: span 1 / span 2;
 }
 
-form > div.c3 {
+form > .c3 {
     grid-area: span 1 / span 3;
 }
 
-form > div.c4 {
+form > .c4 {
     grid-area: span 1 / span 4;
 }
 
-form > div.c6 {
+form > .c6 {
     grid-area: span 1 / span 6;
 }
 
-input {
+input:not([type="radio"]) {
     
     border-radius: 4px;
     border: 1px solid rgb(176,148,193);
@@ -54,7 +54,7 @@ input {
     
 }
 
-input:focus {
+input:not([type="radio"]):focus {
     box-shadow: inset 0px 0px 0px 2px rgb(150, 76, 192);
 }
 
@@ -132,6 +132,64 @@ section.avatar-container h2 {
     border-bottom: 2px solid blueviolet;
 }
 
+section.new-account {
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+section.choose-avatar {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto;
+
+    justify-content: space-around;
+
+    margin-bottom: 10px;
+}
+
+section.choose-avatar div {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    row-gap: 10px;
+}
+
+section.choose-avatar div img {
+    height: 100px;
+    width: 100px;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: rgb(30, 34, 43);
+
+    font: inherit;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid rgba(15, 18, 22, 0.5);
+    border-radius: 50%;
+
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms ease-in-out;
+    box-shadow: inset 1em 1em rgb(101, 73, 187);
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
 
 
 
